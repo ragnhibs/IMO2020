@@ -80,23 +80,16 @@ axs.coastlines()
 data_modelmean.plot(ax=axs,cmap=cmap,levels=levels,transform=ccrs.PlateCarree(),
                     cbar_kwargs={'label': 'Multimodel mean [W m$^{-2}$]'})
 
-#Bruke denne:
+
 sign_lon = sign_modelmean.lon.values
 sign_lat = sign_modelmean.lat.values
 
 sign_data = sign_modelmean.values
 sign_data, sign_lon = add_cyclic_point(sign_data, coord=sign_lon)
-#axs.contourf(sign_lon,sign_lat,sign_data,levels=[0,1,4,5],colors='none',hatches=[None,'////',None],transform=ccrs.PlateCarree())
 
 axs.contourf(sign_lon,sign_lat,sign_data,levels=[0,1,4,5],colors='none',hatches=['...',None,'...'],transform=ccrs.PlateCarree())
 
-#axs.contourf(sign_lon,sign_lat,sign_data,levels=[0,1,4,5],colors='none',hatches=[None,'////',None],transform=ccrs.PlateCarree())
 
-
-"""
-
-sign_modelmean.plot.contourf(ax=axs,levels=[0,1,4,5],colors='none',hatches=[None,'////',None],transform=ccrs.PlateCarree())
-"""
 print('Maxvalue')
 print(data_modelmean.max())
 
