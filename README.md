@@ -2,7 +2,9 @@
 
 Model results and plotting scripts for the manuscript:
 
-Multi-model effective radiative forcing of the 2020 sulphur cap for shipping
+"Multi-model effective radiative forcing of the 2020 sulphur cap for shipping"
+
+by R. B. Skeie, R. Byrom, Ø. Hodnebrog, C. Jouan and G. Myhre
 
 
 Figure 1: plot_erf_figure.py
