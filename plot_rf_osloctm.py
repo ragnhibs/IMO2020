@@ -15,6 +15,12 @@ sys.path.append('/div/qbo/users/ragnhibs/Python/')
 print(sys.path)
 import area_calcs_irregular
 
+plt.rcParams['figure.dpi'] = 300
+
+default_size = 10
+plt.rc('font', size=default_size)
+
+
 #def read_gridarea():
 #    #OsloCTM3 gridarea
 #    filearea = '/div/qbo/hydrogen/OsloCTM3/HYDROGEN_output/areacell_Amon_OsloCTM3_hydrogen-c1_r1_gn_201001-201012.nc'
@@ -45,7 +51,7 @@ def read_osloctm3():
 
     
     if(True):
-        fig, axs = plt.subplots(1, 2,squeeze=True,figsize=(19,3),
+        fig, axs = plt.subplots(1, 2,squeeze=True,figsize=(12,3),
                                 subplot_kw={'projection': ccrs.PlateCarree()})
 
         
@@ -78,6 +84,8 @@ cmap = plt.get_cmap('OrRd')
 read_osloctm3()
 
 plt.tight_layout()
-plt.show()
+
+plt.savefig('figure_rf_osloctm.png') 
+
 
 exit()
