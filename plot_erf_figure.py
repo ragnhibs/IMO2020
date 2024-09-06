@@ -29,7 +29,7 @@ print(model_list_out)
 
 
 
-label_mean = 'Ensemble Mean'
+label_mean = 'Mean'
 label_95 = '95% CI'
 label_90 = '90% CI'
 label_66 = '66% CI'
